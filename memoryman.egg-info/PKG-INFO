@@ -1,6 +1,27 @@
-# Memory Man - AI Memory Layer
+Metadata-Version: 2.1
+Name: memoryman
+Version: 0.1.0
+Summary: A simple, powerful AI memory layer for storing and retrieving chat and model memory locally
+Home-page: https://github.com/yourusername/memoryman
+Author: Memory Team
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+Provides-Extra: vector
 
-A lightweight, production-ready Python module for managing multiple types of AI memory (conversations, facts, events, knowledge) locally with zero external dependencies.
+# AI Memory - Lightweight Memory Layer for AI Models
+
+A simple, powerful, and easy-to-use Python module for managing multiple types of AI memory (conversations, facts, events, knowledge) locally. Perfect for chatbots, AI assistants, and any application that needs persistent memory management.
 
 ## Features
 
@@ -22,7 +43,19 @@ A lightweight, production-ready Python module for managing multiple types of AI 
 
 ### Quick Install
 ```bash
-pip install memoryman
+pip install ai-memory
+```
+
+### From Source
+```bash
+git clone https://github.com/yourusername/ai-memory.git
+cd ai-memory
+pip install -e .
+```
+
+### Install with Development Dependencies
+```bash
+pip install -e ".[dev]"
 ```
 
 ## Quick Start
@@ -30,10 +63,10 @@ pip install memoryman
 ### Basic Usage
 
 ```python
-from memoryman import MemoryManager
+from ai_memory import MemoryManager
 
-# Initialize
-memory = MemoryManager(db_path="./memory.db")
+# Initialize memory manager
+memory = MemoryManager(storage_type="sqlite", db_path="./memory.db")
 
 # Store a message in conversation memory
 memory.store("short_term", {
